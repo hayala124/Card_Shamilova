@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="⋮"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/topParent"
+            app:layout_constraintEnd_toEndOf="@id/topParent" />
+
+        <TextView
+            android:id="@+id/textBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="˂"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/topParent" />
+
+        <TextView
+            android:id="@+id/textAddCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Add New Card"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/topParent"
+            app:layout_constraintEnd_toEndOf="@id/topParent"
+            app:layout_constraintStart_toStartOf="@id/topParent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#0000A7"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/Card2"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topParent">
+
+        <TextView
+            android:id="@+id/YourName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:text="Your Name"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/Card"
+            app:layout_constraintTop_toTopOf="@id/Card" />
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXXX XXXX XXXX XXXX"
+            android:textColor="#C7D0CC"
+            app:layout_constraintStart_toStartOf="@id/Card"
+            app:layout_constraintTop_toBottomOf="@id/YourName" />
+
+        <TextView
+            android:id="@+id/debitCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="A Debit Card"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/Card"
+            app:layout_constraintTop_toTopOf="@id/Card" />
+
+        <TextView
+            android:id="@+id/DebCardX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XX XX"
+            android:textColor="#C7D0CC"
+            app:layout_constraintEnd_toEndOf="@id/debitCard"
+            app:layout_constraintTop_toBottomOf="@id/debitCard" />
+
+        <TextView
+            android:id="@+id/YourBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Your Balance"
+            android:textColor="#C7D0CC"
+            app:layout_constraintStart_toStartOf="@id/Card"
+            app:layout_constraintTop_toBottomOf="@id/Name" />
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/Card"
+            app:layout_constraintTop_toBottomOf="@id/YourBalance" />
+
+        <TextView
+            android:id="@+id/visa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="65dp"
+            android:text="Visa"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/debitCard"
+            app:layout_constraintTop_toBottomOf="@id/DebCardX" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="88dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/Card"
+        app:layout_constraintTop_toBottomOf="@id/Card">
+
+        <TextView
+            android:id="@+id/NameCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Name on Card"
+            app:layout_constraintStart_toStartOf="@id/Card2"
+            app:layout_constraintTop_toTopOf="@id/Card2" />
+
+        <TextView
+            android:id="@+id/YourName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:text="Your Name"
+            app:layout_constraintStart_toStartOf="@id/Card2"
+            app:layout_constraintTop_toBottomOf="@id/NameCard" />
+
+        <TextView
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Card Number"
+            app:layout_constraintTop_toBottomOf="@id/YourName2" />
+
+        <TextView
+            android:id="@+id/YourCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:text="Your Card Number"
+            app:layout_constraintTop_toBottomOf="@id/cardNumber" />
+
+        <TextView
+            android:id="@+id/ExpDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Exp date"
+            app:layout_constraintTop_toBottomOf="@id/YourCardNumber"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/YourExp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:text="Your Exp Card Date"
+            app:layout_constraintStart_toStartOf="@id/ExpDate"
+            app:layout_constraintTop_toBottomOf="@id/ExpDate"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/CVV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="CVV"
+            app:layout_constraintBottom_toBottomOf="@id/ExpDate"
+            app:layout_constraintEnd_toEndOf="@id/YourCardNumber"
+            app:layout_constraintStart_toEndOf="@id/ExpDate" />
+
+        <TextView
+            android:id="@+id/YourCardCVV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:text="Your Card CVV"
+            app:layout_constraintEnd_toEndOf="@id/YourCardNumber"
+            app:layout_constraintStart_toEndOf="@id/YourExp"
+            app:layout_constraintTop_toBottomOf="@id/CVV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Card3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Card2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/buttonAddNewCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:backgroundTint="#0000A7"
+            android:text="Add New Card"
+            app:layout_constraintBottom_toTopOf="@id/line"
+            app:layout_constraintStart_toStartOf="@id/Card3"
+            app:layout_constraintTop_toTopOf="@id/Card3" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/Card3"
+            app:layout_constraintTop_toBottomOf="@id/buttonAddNewCard" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
